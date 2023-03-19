@@ -1,0 +1,291 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Styled Login</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+         
+            font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+        }
+        body{
+            background-color: rgba(9, 78, 9, 0.9);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-image: url("bg.jpg");
+            background-position: center;
+            background-size: cover;
+            
+            background-repeat: no-repeat;
+            
+
+        }
+       .wrapper{
+        width: 210px;
+        display: flex;
+        margin: 20px;
+        height: 250px;
+        background-color: rgba(0,0,0,0.4);
+        border-radius: 5px;
+        color: white;
+        box-shadow: 1px  1px rgba(0,0,0,0.7);
+        justify-content: center;
+        align-items: center;
+        
+
+       }
+       .logo{
+        width: 18px;
+        height: 18px;
+        background-color: rgba(0,0,0,0.4);
+        border: 1px solid aliceblue;
+         border-radius: 50%;
+         margin-bottom: 185px;
+         border-left: 1px solid goldenrod;
+         border-right: 1px solid goldenrod;
+
+       }
+       .wrapper .name h1,
+                .password h1,
+                .email h1,
+                .phone h1,
+                .gender h2{
+                    margin: 0;
+                    font-size: 8px;
+
+                }
+                .wrapper input{
+                    outline: none;
+                    text-align: left;
+                    font-size: 8px;
+                    width:190px ;
+                    height: 20px;
+                    text-indent: 5px;
+                    color: white;
+                    border-left:1px solid rgb(97, 97, 97);
+                    border-right:1px solid rgb(97, 97, 97);
+                    border-top:1px solid goldenrod;
+                    border-radius: 5px;
+                    border-bottom: 1px solid goldenrod;
+                    background-color: transparent;
+                    
+                
+                }
+                .wrapper .name,
+                         .password,
+                         .email,
+                         .phone,
+                         .gender{
+                            margin-top: 4px;
+                         }
+                         .gender .genderNames{
+                            font-size: 10px;
+                            padding-top: 5px;
+                            padding-bottom: 10px;
+                         }
+                         .gender .genderNames input{
+                            width: 15px;
+                            height: 8px;
+                            justify-content: center;
+                            text-align: center;
+                            
+                         }
+                         .btn{
+                            width: auto;
+                            
+                           display: flex;
+                           justify-content: center;
+
+                         }
+                         button{
+                           width: 70px;
+                           border-radius: 2px;
+                           border: none;
+                            padding: 1px;
+                             transition: 0.5s all ease-in-out;
+                         }
+                         button:hover{
+                            background-color: goldenrod;
+                           
+
+                         }
+                         button a{
+                            text-decoration: none;
+                            font-size: 10px;
+                            color: #222;
+                         }
+                         #error-message{
+                            font-size: 10px;
+                            width: 10px;
+                            height: 10px;
+                           margin: 2px;
+                          border-radius: 50%;
+                            display: none;
+                            background-color: red;
+                            color: red;
+                            
+                         }
+                         #error-message1{
+                            font-size: 10px;
+                            width: 10px;
+                            height: 10px;
+                           margin: 2px;
+                          border-radius: 50%;
+                            display: none;
+                            background-color: red;
+                            color: red;
+                            
+                         }
+                         #error-message2{
+                            font-size: 10px;
+                            width: 10px;
+                            height: 10px;
+                           margin: 2px;
+                          border-radius: 50%;
+                            display: none;
+                            background-color: red;
+                            color: red;
+                            
+                         }
+                         #error-message3{
+                            font-size: 10px;
+                            width: 10px;
+                            height: 10px;
+                           margin: 2px;
+                          border-radius: 50%;
+                            display: none;
+                            background-color: red;
+                            color: red;
+                            
+                         }
+                 
+                         
+
+    </style>
+
+</head>
+<body>
+    <div class="wrapper">
+       <div class="logoall">
+        <div class="logo"></div>
+      
+       
+      
+       </div>
+    <form action="">
+
+        <div class="name"> 
+            <h1>Name</h1>
+            <input type="text" placeholder="input Name" id="input-el">
+            <p id="error-message"></p>
+        </div>
+        
+        <div class="phone"> 
+            <h1>
+                Phone
+            </h1>
+            
+            <input type="number" placeholder="+234" mask="000/000" id="input-el1">
+            <p id="error-message1"></p>
+        </div>
+        <div class="email"> 
+            <h1>
+                Email
+            </h1>
+            
+            <input type="email" placeholder="paul@gmail.com" id="input-el2">
+            <p id="error-message2"></p>
+        </div>
+        <div class="password"> 
+            <h1>
+                Password
+            </h1>
+            
+            <input type="password" placeholder="input password" id="input-el3">
+            <p id="error-message3"></p>
+        </div>
+        <div class="gender">
+           
+        <div class="genderNames">
+           
+            <label for="Male">Male</label>
+            <input type="radio" name="Gender" id="male" value="male" required> 
+            <label for="Female">Female</label>
+            <input type="radio" name="Gender" id="female" value="female" required>
+             </div>
+           
+        </div>
+        <div class="btn">
+        <button type="submit" id="btn-el"> <a href="#">Submit</a> </button>
+    </div>
+            
+    </form>
+</div>
+<script>
+let inputEL = document.getElementById("input-el");
+let inputEL1 = document.getElementById("input-el1");
+let inputEL2 = document.getElementById("input-el2");
+let inputEL3 = document.getElementById("input-el3");
+let btnEL = document.getElementById("btn-el");
+let errorMessage = document.getElementById("error-message");
+let errorMessage1 = document.getElementById("error-message1");
+let errorMessage2 = document.getElementById("error-message2");
+let errorMessage3 = document.getElementById("error-message3");
+let errorMessage4 = document.getElementById("error-message4");
+function input(){
+    if (inputEL.value === "") {
+        inputEL.style.borderTop="1px solid red";
+         errorMessage.innerHTML =`<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Pro 6.3.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2023 Fonticons, Inc. --><path d="M256 512A256 256 0 1 0 256 0a256 256 0 1 0 0 512zm0-384c13.3 0 24 10.7 24 24V264c0 13.3-10.7 24-24 24s-24-10.7-24-24V152c0-13.3 10.7-24 24-24zM224 352a32 32 0 1 1 64 0 32 32 0 1 1 -64 0z"/></svg> `;
+       errorMessage.style.display ="flex";
+        
+    } else {
+        return;
+    }
+}
+function input1(){
+    if (inputEL1.value === "") {
+        inputEL1.style.borderTop="1px solid red";
+        errorMessage1.innerHTML =`<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Pro 6.3.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2023 Fonticons, Inc. --><path d="M256 512A256 256 0 1 0 256 0a256 256 0 1 0 0 512zm0-384c13.3 0 24 10.7 24 24V264c0 13.3-10.7 24-24 24s-24-10.7-24-24V152c0-13.3 10.7-24 24-24zM224 352a32 32 0 1 1 64 0 32 32 0 1 1 -64 0z"/></svg> `;
+       errorMessage1.style.display ="flex";
+        
+    } else {
+        return;
+    }
+}
+function input2(){
+    if (inputEL2.value === "") {
+        inputEL2.style.borderTop="1px solid red";
+        errorMessage2.innerHTML =`<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Pro 6.3.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2023 Fonticons, Inc. --><path d="M256 512A256 256 0 1 0 256 0a256 256 0 1 0 0 512zm0-384c13.3 0 24 10.7 24 24V264c0 13.3-10.7 24-24 24s-24-10.7-24-24V152c0-13.3 10.7-24 24-24zM224 352a32 32 0 1 1 64 0 32 32 0 1 1 -64 0z"/></svg> `;
+       errorMessage2.style.display ="flex";
+      
+        
+    } else {
+        return;
+    }
+}
+function input3(){
+    if (inputEL3.value === "") {
+        inputEL3.style.borderTop="1px solid red";
+        errorMessage3.innerHTML =`<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Pro 6.3.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2023 Fonticons, Inc. --><path d="M256 512A256 256 0 1 0 256 0a256 256 0 1 0 0 512zm0-384c13.3 0 24 10.7 24 24V264c0 13.3-10.7 24-24 24s-24-10.7-24-24V152c0-13.3 10.7-24 24-24zM224 352a32 32 0 1 1 64 0 32 32 0 1 1 -64 0z"/></svg> `;
+       errorMessage3.style.display ="flex";
+        
+    } else {
+        return;
+    }
+}
+btnEL.addEventListener("click", ()=>{
+    input();
+    input1();
+    input2();
+    input3();
+
+})
+</script>
+</body>
+</html>
